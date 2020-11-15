@@ -1,0 +1,37 @@
+<div class="credit-card-box">
+  
+      <div class="side d-flex flex-column"
+            [ngClass]="containerToHighlight==='cvv' ? 'flipFront':'front'">
+            <div class="mb-auto width-full d-flex justify-content-between">
+                <img src="assets/images/chip (1).png" 
+                      class="img-reponsive imageDimension">
+                <img src="assets/images/chip.png" 
+                      class="img-reponsive imageDimension">
+            </div>
+            <div class="mb-auto card-no text-center"
+                  [ngClass]="{'border border-white rounded-lg' : containerToHighlight==='cardNo'}">
+                    <strong>{{cardNo | cardNoFormat}}</strong>
+            </div>
+            <div class="d-flex card-holder-exp">
+              <div class="borders col-9"
+                    [ngStyle]="{'border-color': containerToHighlight==='cardHolder'?'white':'transparent'}">
+                  <div class="label">Card Holder</div>
+                  <span class="font-weight-bold">{{cardHolder}}</span>
+              </div>
+              <div class="borders col-3 " 
+                    [ngStyle]="{'border-color': containerToHighlight==='expDate'?'white':'transparent'}">
+                  <div class="label">Expires</div>
+                  <span class="font-weight-bold justify-content-center">{{expiration | expireFormat}}</span>
+              </div>
+            </div>
+      </div>
+
+      <div class="side" [ngClass]="containerToHighlight==='cvv' ? 'flipBack':'back' ">
+        <div class="black-stripe">
+        </div>    
+        <div class="cvv-wrapper">
+          <div class="label font-weight-bold d-flex justify-content-end">CVV</div>
+          <div class="cvv">{{cvv}}</div>
+        </div>
+      </div>
+</div>

@@ -1,0 +1,29 @@
+.move-up
+{
+  position: absolute;
+  left: 50%;
+  top : -100px;
+  transform: translateX(-50%);
+}
+.form-down
+{
+  padding-top: 100px;
+}
+.wrapper 
+{
+   background: white;
+   width: 400px;
+   border-radius: 15px;
+   box-shadow: 0 10px 40px rgba(51, 44, 44, 0.1);
+   padding: 0 10px;
+ }
+
+select
+{
+  width: max-content;
+  padding: 0.25rem 0.5rem;
+}
+label
+{
+  font-size: 15px;
+}

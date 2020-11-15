@@ -1,0 +1,8 @@
+.container-fluid
+{
+  min-height: 85%;
+  position: absolute;
+  top: 15%;
+  padding: unset;
+  box-sizing: border-box;
+}
